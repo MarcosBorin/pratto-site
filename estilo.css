@@ -1,0 +1,136 @@
+/*
+ * O SITE MÍNIMO DO PRATTO, desde 09/10: o início com "Em breve", a política
+ * de privacidade e os termos de uso, que são os links que o app já mostra
+ * (`lib/termos.ts`). Ele, às 10:23: "OK, faça, depois vamos fazer um
+ * caprichado quando formos lançar".
+ *
+ * A CARA É A DA ABERTURA DO APP: o verde da marca no fundo, o creme no texto e
+ * no logo, e a fonte do sistema, a mesma do app (`a-familia-de-texto-do-app`).
+ * Creme sobre o verde dá 10:1, folga para texto corrido.
+ */
+:root {
+  color-scheme: dark;
+  --verde: #123a2c;
+  --creme: #efeadf;
+  --creme-suave: rgba(239, 234, 223, 0.72);
+  --fio: rgba(239, 234, 223, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--verde);
+  color: var(--creme);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* O topo das páginas de texto: só o logo, que leva ao início. */
+.topo {
+  padding: 18px 16px;
+  border-bottom: 1px solid var(--fio);
+}
+
+.topo a {
+  display: inline-block;
+}
+
+.topo img {
+  display: block;
+  width: auto;
+  height: 28px;
+}
+
+.texto {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 36px 16px 56px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.versao {
+  margin: 0 0 28px;
+  color: var(--creme-suave);
+  font-size: 15px;
+}
+
+h2 {
+  margin: 40px 0 12px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+p,
+li {
+  margin: 0 0 14px;
+}
+
+ul {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+
+.pe {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  border-top: 1px solid var(--fio);
+  color: var(--creme-suave);
+  font-size: 15px;
+}
+
+.pe p {
+  margin: 0 0 8px;
+}
+
+/* O INÍCIO: o logo no meio da tela, como na abertura do app. */
+.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 32px 16px 96px;
+  text-align: center;
+}
+
+.inicio img {
+  width: min(260px, 68vw);
+  height: auto;
+}
+
+.inicio .em-breve {
+  margin: 28px 0 0;
+  font-size: 19px;
+}
+
+.inicio nav {
+  position: absolute;
+  right: 16px;
+  bottom: 28px;
+  left: 16px;
+  color: var(--creme-suave);
+  font-size: 15px;
+}
+
+.inicio nav a {
+  margin: 0 10px;
+}
